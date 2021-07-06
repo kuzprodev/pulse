@@ -107,16 +107,24 @@
     Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут
 </div>
 <!-- /.consultation__descr -->
-<form action="#" method="POST">
-    <label for="first">First input</label>
-<input id="first" type="text">
-<input type="tel">
-<input type="submit" value="Send">
+<form action="#" method="POST" class="feed-form">
+    <!-- <label for="first">First input</label> -->
+<input name="name" required type="text" placeholder="Ваше имя">
+<input name="phone" required type="tel" placeholder="Ваш телефон">
+<input name="email" required type="e-mail" placeholder="Ваш E-mail">
+<!-- <input type="submit" value="Заказать консультацию"> -->
+<!-- <textarea name="" id="" cols="30" rows="10" style="resize:none" placeholder="write some text"></textarea> -->
+<button class="button button_submit">Заказать консультацию</button>
+<!-- <input type="reset" value="reset"> -->
 </form>
         </div>
         <!-- /.container -->
     </div>
     <!-- /.consultation -->
+
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
