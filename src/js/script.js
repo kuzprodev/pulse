@@ -59,7 +59,7 @@ $(document).ready(function () {
     // });
 
 
-    function toggleSlide(item){
+    function toggleSlide(item) {
         $(item).each(function (i) {
             $(this).on('click', function (e) {
                 e.preventDefault();
@@ -70,7 +70,31 @@ $(document).ready(function () {
     };
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    //for modal
+    $('[data-modal=consultation]').on('click', function () {
+        $('.overlay, #consultation').fadeIn('slow')
+    });
+    $('.modal__close').on('click', function () {
+        $('.overlay,#consultation,#order, #thanks').fadeOut('slow')
+    });
+    $('.button_mini').on('click', function () {
+        $('.overlay, #order').fadeIn('slow')
+    });
+    // .fadeOut() скрыть аккуратно
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text()); //вытаскиваем и вставляем текст
+        })
+    });
 });
+
+
+
+
+
+
+
 
 // //замена jquery
 // $('.may-container').css('border', '1px solid red');
