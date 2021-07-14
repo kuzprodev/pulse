@@ -176,6 +176,9 @@ $(document).ready(function () {
     valideForm('#consultation-form');
     valideForm('#consultation form');
     valideForm('#order form');
+// for  mask form
+$('input[name=phone]').mask('+7(999) 999-9999'); //ннада убрат type="number"
+
 });
 
 
