@@ -47,9 +47,8 @@
                     <div class="promo__icon"><img src="icons/main_screen/messages.png" alt="">
                         Ответим
                         на все вопросы</div>
-                </div>
-
-                <button data-modal="consultation" class="button button_main">заказать консультацию</button>
+                </div> 
+                <button class="button button_main">заказать консультацию</button>
                 <div class="promo__link">
                     или <a href="#">перейти в каталог</a>
                 </div>
@@ -108,11 +107,11 @@
                 Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут
             </div>
             <!-- /.consultation__descr -->
-            <form action="#" method="POST" class="feed-form">
+            <form action="#" method="POST" class="feed-form" id="consultation-form">
                 <!-- <label for="first">First input</label> -->
-                <input name="name" required type="text" placeholder="Ваше имя">
-                <input name="phone" required type="tel" placeholder="Ваш телефон">
-                <input name="email" required type="e-mail" placeholder="Ваш E-mail">
+                <input name="name" type="text" placeholder="Ваше имя">
+                <input name="phone" type="tel" placeholder="Ваш телефон">
+                <input name="email" type="e-mail" placeholder="Ваш E-mail">
                 <!-- <input type="submit" value="Заказать консультацию"> -->
                 <!-- <textarea name="" id="" cols="30" rows="10" style="resize:none" placeholder="write some text"></textarea> -->
                 <button class="button button_submit">Заказать консультацию</button>
@@ -490,9 +489,9 @@
     <div class="modal__descr">и мы вам перезвоним в течении 10 минут</div>
     <form action="#" method="POST" class="feed-form feed-form_mt25">
         <!-- <label for="first">First input</label> -->
-        <input name="name" required type="text" placeholder="Ваше имя">
-        <input name="phone" required type="tel" placeholder="Ваш телефон">
-        <input name="email" required type="e-mail" placeholder="Ваш E-mail">
+        <input name="name"  type="text" placeholder="Ваше имя">
+        <input name="phone" type="tel" placeholder="Ваш телефон">
+        <input name="email"  type="e-mail" placeholder="Ваш E-mail">
         <!-- <input type="submit" value="Заказать консультацию"> -->
         <!-- <textarea name="" id="" cols="30" rows="10" style="resize:none" placeholder="write some text"></textarea> -->
         <button class="button button_submit">Заказать консультацию</button>
@@ -506,9 +505,9 @@
     <div class="modal__descr">Пульсометр Polar FT1</div>
     <form action="#" method="POST" class="feed-form feed-form_mt25">
         <!-- <label for="first">First input</label> -->
-        <input name="name" required type="text" placeholder="Ваше имя">
-        <input name="phone" required type="tel" placeholder="Ваш телефон">
-        <input name="email" required type="e-mail" placeholder="Ваш E-mail">
+        <input name="name" type="text" placeholder="Ваше имя">
+        <input name="phone" type="tel" placeholder="Ваш телефон">
+        <input name="email" type="e-mail" placeholder="Ваш E-mail">
         <!-- <input type="submit" value="Заказать консультацию"> -->
         <!-- <textarea name="" id="" cols="30" rows="10" style="resize:none" placeholder="write some text"></textarea> -->
         <button class="button button_submit">Купить</button>
@@ -528,6 +527,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
 
     <script src="js/script.js"></script>
 </body>
