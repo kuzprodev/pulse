@@ -142,16 +142,16 @@ $(document).ready(function () {
     //             minlength: jQuery.validator.format("At least {0} characters required!")
     //         }
     //     }
-    
+
     // });
     // $("#myform").validate({
     //     errorClass: "invalid",
     //     validClass: "success",
 
     //   });
- 
 
-    function valideForm(form){
+
+    function valideForm(form) {
         $(form).validate({
             rules: {
                 name: "required",
@@ -164,20 +164,40 @@ $(document).ready(function () {
             messages: {
                 name: "Пожалуйста, введите свое имя",
                 phone: "Пожалуйста, введите свой номер телефона"
-    
+
                     ,
                 email: {
                     required: "Пожалуйста, введите свою почту",
                     email: "Неправильно введен адрес почты"
                 }
-            }    
+            }
         });
     };
     valideForm('#consultation-form');
     valideForm('#consultation form');
     valideForm('#order form');
-// for  mask form
-$('input[name=phone]').mask('+7(999) 999-9999'); //ннада убрат type="number"
+    // for  mask form
+    $('input[name=phone]').mask('+7(999) 999-9999'); //ннада убрат type="number"
+
+    // отправка форм
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+
+        }).done(function () {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('#overlay,#thanks').fadeIn('slow')
+            $('form').trigger('reset')
+        });
+        return false
+    })
+
+
+
 
 });
 
