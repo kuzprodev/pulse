@@ -143,16 +143,18 @@
             }
         }
 
-        &__list {
+        &__list  {
             width: 50%;
             margin-left: 0px;
             transform: translateX(0%);
             padding-right: 20px;
             transition: .5s all;
-            padding-left: 19px;
             margin-bottom: 0;
-            list-style-type: none;
-
+            
+ul{
+    padding-left: 19px;
+    list-style-type: none;
+}
             &_active {
                 transform: translateX(-100%);
                 margin-left: 20px;
@@ -175,6 +177,7 @@
                     top: 8px;
                 }
             }
+            
         }
 
         &__back {
